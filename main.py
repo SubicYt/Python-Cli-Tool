@@ -1,9 +1,10 @@
-print("Hello World")
-
 def main():
-    return "Hello How ya doing"
+    book_path = "Books/frankenstein.txt"
+    txt = get_book_text(book_path)
+    print (txt)
 
-def addition(a,c):
-    return(a + c)
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
 
-print (addition(1,3))
+main()
